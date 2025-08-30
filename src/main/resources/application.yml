@@ -2,15 +2,14 @@ server:
   port: 8888
 spring:
   application:
-    name: config-server
+    name: config_server
   cloud:
     config:
       server:
         git:
-          uri: https://github.com/Kirvlstep2006/src/main/resources
+          uri: https://github.com/Kirvlstep2006/config-repo.git
           default-label: main
-          search-paths: configs/*
+          skip-ssl-validation: false
           clone-on-start: true
-          force-pull: true
-          username: Kirvlstep2006
-          password: Kirvl050906
+          search-paths: '*'
+
